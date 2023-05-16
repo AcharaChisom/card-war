@@ -11,6 +11,7 @@ const myScoreEl = document.getElementById("my-score")
 
 function handleClick() {
     drawCardBtn.disabled = false
+    newDeckBtn.disabled = true
     fetch("https://apis.scrimba.com/deckofcards/api/deck/new/shuffle/")
         .then(res => res.json())
         .then(data => {
